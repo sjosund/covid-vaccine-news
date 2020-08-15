@@ -1,0 +1,15 @@
+{
+  "name": "cvnews",
+  "version": "1.0.0",
+  "description": "News about COVID vaccine",
+  "main": "index.js",
+  "dependencies": {
+    "rss-parser": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
