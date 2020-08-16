@@ -2,6 +2,7 @@ const Parser = require('rss-parser');
 
 const resources = [
     {source: 'NY Times', url: 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml'},
+    {source: 'NY Times', url: 'https://rss.nytimes.com/services/xml/rss/nyt/health.xml'},
     {source: 'The Guardian', url: 'https://www.theguardian.com/world/rss'},
     {source: 'BBC News', url: 'http://feeds.bbci.co.uk/news/video_and_audio/health/rss.xml'},
     {source: 'BBC News', url: 'http://feeds.bbci.co.uk/news/health/rss.xml'},
