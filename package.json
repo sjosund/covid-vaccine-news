@@ -4,6 +4,7 @@
   "description": "News about COVID vaccine",
   "main": "index.js",
   "dependencies": {
+    "moment": "^2.27.0",
     "rss-parser": "^3.9.0"
   },
   "devDependencies": {},

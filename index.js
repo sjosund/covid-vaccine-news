@@ -1,13 +1,20 @@
 const Parser = require('rss-parser');
+const moment = require('moment');
 
 const resources = [
     {source: 'NY Times', url: 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml'},
     {source: 'NY Times', url: 'https://rss.nytimes.com/services/xml/rss/nyt/health.xml'},
+    {source: 'NY Times', url: 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml'},
     {source: 'The Guardian', url: 'https://www.theguardian.com/world/rss'},
+    {source: 'The Guardian', url: 'https://www.theguardian.com/world/coronavirus-outbreak/rss'},
     {source: 'BBC News', url: 'http://feeds.bbci.co.uk/news/video_and_audio/health/rss.xml'},
     {source: 'BBC News', url: 'http://feeds.bbci.co.uk/news/health/rss.xml'},
     {source: 'BBC News', url: 'http://feeds.bbci.co.uk/news/video_and_audio/world/rss.xml'},
-    {source: 'BBC News', url: 'http://feeds.bbci.co.uk/news/world/rss.xml'}
+    {source: 'BBC News', url: 'http://feeds.bbci.co.uk/news/world/rss.xml'},
+    {source: 'Daily Mail', url: 'https://www.dailymail.co.uk/news/coronavirus/index.rss'},
+    {source: 'Daily Mail', url: 'https://www.dailymail.co.uk/sciencetech/coronavirus-vaccine-research/index.rss'},
+    {source: 'Daily Mail', url: 'https://www.dailymail.co.uk/news/worldnews/index.rss'},
+    {source: 'Daily Mail', url: 'https://www.dailymail.co.uk/health/index.rss'}
 ];
 
 async function load() {
@@ -40,7 +47,8 @@ function appendToDocument({ source, title, url, time }) {
 
     var datetime = document.createElement('p');
     datetime.setAttribute('class', 'time-text')
-    datetime.appendChild(document.createTextNode(new Date(time).toISOString()))
+    console.log(time);
+    datetime.appendChild(document.createTextNode(moment(time).format('MMM D, HH:mm')));
     header.appendChild(datetime);
 
     var sourceElement = document.createElement('p');

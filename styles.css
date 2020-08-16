@@ -22,17 +22,20 @@ body {
 
 .header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
 }
 
 .source-text {
     order: 1;
+    margin-bottom: 0em;
 }
 
 .time-text {
     color: #888;
-    order: 2
+    order: 2;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
 }
 
 .story > a {
